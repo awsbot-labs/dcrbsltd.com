@@ -1,0 +1,141 @@
+/* 3D Clouds 
+  Thanks to Jaume Sanchez
+  http://www.clicktorelease.com/
+*/
+#viewport {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    perspective: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(69, 132, 180)), color-stop(0.64, rgb(31, 71, 120)));
+}
+#world {
+    height: 512px;
+    left: 50%;
+    margin-left: -256px;
+    margin-top: -256px;
+    position: absolute;
+    top: 50%;
+    transform-style: preserve-3d;
+    width: 512px;
+    /*background-color: rgba( 255, 0, 0, .2 );*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+}
+.cloudBase {
+    /*background-color: rgba( 255, 0, 255, .5 );*/
+    height: 20px;
+    left: 256px;
+    margin-left: -10px;
+    margin-top: -10px;
+    position: absolute;
+    top: 256px;
+    width: 20px;
+}
+.cloudLayer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 256px;
+    height: 256px;
+    margin-left: -128px;
+    margin-top: -128px;
+    /*background-color: rgba( 0, 255, 255, .1 );*/
+    -webkit-transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+/* Style */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(69, 132, 180)), color-stop(0.64, rgb(31, 71, 120)));
+    */overflow: hidden;
+    color: #337ab7;
+}
+footer {
+    padding-left: 30px;
+}
+/*  
+    Footer Style
+    by Jaffry Jalal
+    http://www.dullneon.com
+*/
+span.footnote {
+    font-family: Inconsolata, monospace;
+    font-size: 10px;
+    font-weight: normal;
+}
+/*  
+    Sticky Footer Solution
+    by Steve Hatcher 
+    http://stever.ca
+    http://www.cssstickyfooter.com
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*  must declare 0 margins on everything, also for main layout components use padding, not 
+    vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+    and your footer gets pushed down a bit more, creating vertical scroll bars in the browser 
+*/
+html,
+body {
+    height: 100%;
+}
+#wrap {
+    min-height: 100%;
+}
+#main {
+    overflow: auto;
+    padding-bottom: 180px;
+}
+/* must be same height as the footer */
+#footer {
+    position: relative;
+    margin-top: -40px;
+    /* negative value of footer height */
+    
+    height: 40px;
+    clear: both;
+}
+/*Opera Fix*/
+body:before {
+    /* thanks to Maleika (Kohoutec)*/
+    
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+    /* thank you Erik J - negate effect of float*/
+}
+/*
+  You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
+*/
+<!--[if !IE 7]> <style type="text/css"> #wrap {
+    display: table;
+    height: 100%
+}
+</style> <![endif]-->
+
+#left {
+  float: left;
+}
+#right {
+  float: right;
+}
+
+.tunes {
+  position: relative;
+  bottom: 315px;
+  
+}
